@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Mengatur Dark Mode manual menggunakan @variant (Sintaks resmi Tailwind v4) */
+@variant dark (&:where(.dark, .dark *));
+
+/* Gunakan CSS Standar untuk Body/HTML agar Vite tidak error saat memproses @apply */
+html {
+  transition-property: color, background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Warna default (Light Mode) - setara slate-50 & slate-900 */
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Warna saat class 'dark' aktif di HTML */
+.dark body {
+  background-color: #0a0f1c;
+  color: #ffffff;
+}
