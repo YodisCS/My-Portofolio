@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// Pastikan tidak ada import framer-motion di sini
 import {
   FaGithub,
   FaWhatsapp,
@@ -34,11 +33,9 @@ function App() {
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen p-4 overflow-hidden selection:bg-purple-300 selection:text-purple-900">
-      {/* Background Gradients - Statis dan Ringan */}
       <div className="absolute top-[10%] left-[-15%] md:left-[10%] w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#fca5a5]/30 dark:bg-[#4c1d95]/30 rounded-full blur-[80px] md:blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[10%] right-[-15%] md:right-[10%] w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#67e8f9]/30 dark:bg-[#0891b2]/20 rounded-full blur-[80px] md:blur-[100px] pointer-events-none" />
 
-      {/* Tombol Toggle Tema */}
       <div className="absolute top-6 right-6 z-50">
         <button
           onClick={() => setIsDarkMode(!isDarkMode)}
@@ -51,8 +48,6 @@ function App() {
           )}
         </button>
       </div>
-
-      {/* Kartu Utama - Animasi CSS Murni (animate-in fade-in slide-in-from-bottom-5) */}
       <div className="relative z-10 w-full max-w-[420px] p-8 mt-10 rounded-[2.5rem] bg-white/40 dark:bg-[#0a0f1c]/50 backdrop-blur-md border border-white/80 dark:border-white/10 shadow-lg animate-in fade-in slide-in-from-bottom-5 duration-700">
         {/* Header Profil */}
         <div className="flex flex-col items-center text-center mb-8">
@@ -69,15 +64,12 @@ function App() {
             Yodis Saputra
           </h1>
           <p className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 flex items-center gap-2">
-            Web Developer <span>☕</span>
+            UI/UX Designer & Web Developer <span></span>
           </p>
           <p className="text-xs text-slate-500 dark:text-slate-400 max-w-[280px] leading-relaxed">
-            Menyulap ide menjadi realitas digital dengan kode yang rapi, ringan,
-            dan responsif.
+            Membangun ide menjadi realitas, satu baris kode setiap kalinya.
           </p>
         </div>
-
-        {/* Daftar Tombol Link */}
         <div className="w-full space-y-0">
           <LinkButton
             title="Portofolio Behance"
@@ -101,8 +93,6 @@ function App() {
             secretHref={DATA_RAHASIA.EMAIL}
           />
         </div>
-
-        {/* Ikon Sosial Media Bawah */}
         <div className="flex justify-center gap-4 mt-8">
           <SocialIcon
             icon={<FaInstagram className="text-pink-600 dark:text-pink-400" />}
@@ -123,7 +113,6 @@ function App() {
         </div>
       </div>
 
-      {/* Footer */}
       <div className="mt-8 mb-4 text-xs font-medium text-slate-500 dark:text-slate-400/80 z-10 relative">
         © Yodis Saputra
       </div>

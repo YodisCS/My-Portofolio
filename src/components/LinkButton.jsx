@@ -3,7 +3,7 @@ import { obfus } from "../utils/security";
 export default function LinkButton({
   title,
   icon,
-  href, // Tambahan agar link biasa tidak error
+  href,
   secretHref,
   isContact = false,
 }) {
@@ -12,14 +12,12 @@ export default function LinkButton({
 
     let finalUrl = href;
 
-    // Jika pakai link rahasia, proses dulu kodenya
     if (secretHref) {
       const rawUrl = obfus(secretHref);
       finalUrl =
         isContact && !rawUrl.includes(":") ? `https://wa.me/${rawUrl}` : rawUrl;
     }
 
-    // Buka tab baru jika URL valid
     if (finalUrl && finalUrl !== "#") {
       window.open(finalUrl, "_blank", "noopener,noreferrer");
     }
