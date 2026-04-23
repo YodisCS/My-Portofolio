@@ -74,7 +74,7 @@ function App() {
           <LinkButton
             title="Portofolio Behance"
             icon={<FaBehance className="text-[#0057ff] dark:text-[#337eff]" />}
-            href="#"
+            href="https://yodisporto.netlify.app/"
           />
           <LinkButton
             title="GitHub"
